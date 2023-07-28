@@ -15,4 +15,5 @@ A sh script that finds offsets for you from an IPSW link:)
 
 ## Credits
 AppInstallerIOS - base script
+
 tihmstar - libpatchfinder
