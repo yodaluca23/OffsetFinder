@@ -1,7 +1,7 @@
-#OffsetFinder
+# OffsetFinder
 A sh script that finds offsets for you from an IPSW link:)
 
-##What's required
+## What's required
 - libpatchfinder from tihmstar (https://github.com/tihmstar/libpatchfinder) installed but configured with this command : 
 ./configure --with-offsetexporter
 - wget (brew install wget)
