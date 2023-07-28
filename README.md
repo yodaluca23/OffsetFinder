@@ -1,6 +1,18 @@
-# KFD-Offsets
-Should be every offset for the KFD exploit on all A12+ devices. No M1
+#OffsetFinder
+A sh script that finds offsets for you from an IPSW link:)
 
-# Supported iOS betas might be added in a few days.
+##What's required
+- libpatchfinder from tihmstar (https://github.com/tihmstar/libpatchfinder) installed but configured with this command : 
+./configure --with-offsetexporter
+- wget (brew install wget)
+- partialZipBrowser installed to PATH (https://github.com/tihmstar/partialZipBrowser) a.k.a pzb
+- python3 with pyimg4 installed (brew install python && pip3 install pyimg4)
+- An IPSW URL (can be obtained from ipsw.me or ipswbeta.dev)
+- Your Device Identifier (http://bit.ly/Devices_IDs)
+- The IPSW version (obviously)
+- The IPSW Build ID
+- An Internet connection (warning ; possible high data usage)
 
-The offsets names are in this format `iDevice-Identifier iOS-Version iOS-Build-ID.h` eg `iPhone11,8 16.3 20D47.h`
+## Credits
+AppInstallerIOS - base script
+tihmstar - libpatchfinder
