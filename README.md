@@ -2,18 +2,17 @@
 A sh script that finds offsets for you from an IPSW link:)
 
 ## What's required
-- libpatchfinder from tihmstar (https://github.com/tihmstar/libpatchfinder) installed but configured with this command : 
+- [libpatchfinder](https://github.com/tihmstar/libpatchfinder) from [tihmstar](https://github.com/tihmstar) installed but *Make* have to be configured with this command : 
 ```./configure --with-offsetexporter```
-- wget (```brew install wget```)
-- partialZipBrowser installed to PATH (https://github.com/tihmstar/partialZipBrowser) a.k.a pzb
-- python3 with pyimg4 installed (brew install python && pip3 install pyimg4)
-- An IPSW URL (can be obtained from ipsw.me or ipswbeta.dev)
-- Your Device Identifier (http://bit.ly/Devices_IDs)
-- The IPSW version (obviously)
-- The IPSW Build ID
-- An Internet connection (warning ; possible high data usage)
+- [wget](https://formulae.brew.sh/formula/wget) (```brew install wget```)
+- [partialZipBrowser](https://github.com/tihmstar/partialZipBrowser) installed to PATH (a.k.a pzb)
+- [Python 3](https://formulae.brew.sh/formula/python@3.11) and [PyIMG4](https://github.com/m1stadev/PyIMG4) installed (```brew install python && pip3 install pyimg4```)
+- An IPSW URL (it can be obtained from [ipsw.me](https://ipsw.me/) or [ipswbeta.dev](https://ipswbeta.dev/)
+- Your Device Identifier (see a list [here](http://bit.ly/Devices_IDs))
+- The iOS version and the iOS Build ID that the IPSW contains
+- An Internet connection
 
 ## Credits
-AppInstallerIOS - base script
+[AppInstallerIOS](https://github.com/BenjaminHornbeck6) - [base script](https://www.reddit.com/r/jailbreak/comments/15b0u0b/comment/jtqbzj1/)
 
-[tihmstar](https://github.com/tihmstar)- libpatchfinder
+[tihmstar](https://github.com/tihmstar) - [libpatchfinder](https://github.com/tihmstar/libpatchfinder)
