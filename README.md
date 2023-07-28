@@ -1,5 +1,5 @@
 # OffsetFinder
-An sh script that finds offsets for you from an IPSW link:)
+An sh script that finds offsets for you from an IPSW link :)
 
 ## What's required
 - [libpatchfinder](https://github.com/tihmstar/libpatchfinder) from [tihmstar](https://github.com/tihmstar) installed but *Make* have to be configured with this command : 
