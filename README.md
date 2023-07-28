@@ -13,6 +13,6 @@ A sh script that finds offsets for you from an IPSW link:)
 - An Internet Connection
 
 ## Credits
-[AppInstallerIOS](https://github.com/BenjaminHornbeck6) - [base script](https://www.reddit.com/r/jailbreak/comments/15b0u0b/comment/jtqbzj1/)
+[AppInstallerIOS](https://github.com/BenjaminHornbeck6) - [Base Script](https://www.reddit.com/r/jailbreak/comments/15b0u0b/comment/jtqbzj1/)
 
 [tihmstar](https://github.com/tihmstar) - [libpatchfinder](https://github.com/tihmstar/libpatchfinder)
