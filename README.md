@@ -7,10 +7,10 @@ A sh script that finds offsets for you from an IPSW link:)
 - [wget](https://formulae.brew.sh/formula/wget) (```brew install wget```)
 - [partialZipBrowser](https://github.com/tihmstar/partialZipBrowser) installed to PATH (a.k.a pzb)
 - [Python 3](https://formulae.brew.sh/formula/python@3.11) and [PyIMG4](https://github.com/m1stadev/PyIMG4) installed (```brew install python && pip3 install pyimg4```)
-- An IPSW URL (it can be obtained from [ipsw.me](https://ipsw.me/) or [ipswbeta.dev](https://ipswbeta.dev/)
-- Your Device Identifier (see a list [here](http://bit.ly/Devices_IDs))
+- An IPSW URL (it can be obtained from [ipsw.me](https://ipsw.me/) or [ipswbeta.dev](https://ipswbeta.dev/))
+- Your Device Identifier (full list [here](http://bit.ly/Devices_IDs))
 - The iOS version and the iOS Build ID that the IPSW contains
-- An Internet connection
+- An Internet Connection
 
 ## Credits
 [AppInstallerIOS](https://github.com/BenjaminHornbeck6) - [base script](https://www.reddit.com/r/jailbreak/comments/15b0u0b/comment/jtqbzj1/)
