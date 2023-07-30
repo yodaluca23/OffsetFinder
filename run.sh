@@ -1,11 +1,27 @@
 #!/bin/bash
-wget https://raw.githubusercontent.com/tihmstar/libpatchfinder/master/example/offsetexporter/template_dynamic_info.h -O template_dynamic_info.h
+curl -s -O https://raw.githubusercontent.com/tihmstar/libpatchfinder/master/example/offsetexporter/template_dynamic_info.h
 clear
-echo -e "OffsetFinder v0.1 - made by c22dev\nCredits : AppInstallerIOS, tihmstar"
+echo -e "OffsetFinder v0.2 - made by c22dev\nCredits : AppInstallerIOS, tihmstar"
 read -p "Enter the IPSW URL: " IPSWURL
-read -p "Enter your device Identifier (e.g. iPhone11,8): " Identifier
-read -p "Enter the IPSW Version (e.g 16.1): " Version
-read -p "Enter the IPSW Build ID (e.g. 20B79): " BuildID
+filename=$(basename "$IPSWURL")
+info=${filename%_Restore.ipsw}
+IFS="_" read -r Identifier Version BuildID <<< "$info"
+
+echo "Device Identifier: $Identifier"
+echo "IPSW Version: $Version"
+echo "IPSW Build ID: $BuildID"
+
+read -p "Is everything right ? (Y/N): " confirm
+if [[ "$confirm" == "Y" ]]; then
+    echo "Great ! Extracting offsets."
+else
+    read -p "Enter your device Identifier (e.g. iPhone11,8): " Identifier
+    read -p "Enter the IPSW Version (e.g 16.1): " Version
+    read -p "Enter the IPSW Build ID (e.g. 20B79): " BuildID
+fi
+
+
+# Offsets extracting
 if [[ "$Identifier" =~ "iPhone".* || "$Identifier" =~ "iPad".* ]]; then            KernelCacheName=$(pzb -l --nosubdirs "$IPSWURL" | grep kernelcache.release | sed 's/^.*kernelcache/kernelcache/')
     pzb -g "$KernelCacheName" "$IPSWURL" > /dev/null
     python3 -m pyimg4 im4p extract -i "$KernelCacheName" -o "$Identifier".raw
