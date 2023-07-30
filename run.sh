@@ -13,11 +13,12 @@ echo "IPSW Build ID: $BuildID"
 
 read -p "Is everything right ? (Y/N): " confirm
 if [[ "$confirm" == "Y" ]]; then
-    echo "Great ! Extracting offsets."
+    echo "Great ! Downloading image..."
 else
     read -p "Enter your device Identifier (e.g. iPhone11,8): " Identifier
     read -p "Enter the IPSW Version (e.g 16.1): " Version
     read -p "Enter the IPSW Build ID (e.g. 20B79): " BuildID
+    echo "Downloading image..."
 fi
 
 
@@ -87,5 +88,5 @@ if [[ "$Identifier" =~ "iPhone".* || "$Identifier" =~ "iPad".* ]]; then         
         --find_function_vn_kqfilter %kernelcache__vn_kqfilter% \
         rm "$Identifier".raw
 fi
-
+find . -type f -name "*.raw" -delete
 rm template_dynamic_info.h
