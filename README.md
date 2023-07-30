@@ -10,6 +10,7 @@ Required :
 - [Python 3](https://formulae.brew.sh/formula/python@3.11) and [PyIMG4](https://github.com/m1stadev/PyIMG4) installed (```brew install python && pip3 install pyimg4```)
 - An Internet Connection
 - An IPSW (iOS 16.0 or higher) URL (it can be obtained from [ipsw.me](https://ipsw.me/) or [ipswbeta.dev](https://ipswbeta.dev/))
+
 Optional : 
 - Your Device Identifier (full list [here](http://bit.ly/Devices_IDs))
 - The iOS version and the iOS Build ID that the IPSW contains
