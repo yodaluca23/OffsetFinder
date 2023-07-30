@@ -4,7 +4,7 @@ This can also generate offsets for betas.
 <img src="https://i.ibb.co/RQJ9hDs/Pasted-Graphic.png">
 ## Dependencies
 Required :
-- [libpatchfinder](https://github.com/tihmstar/libpatchfinder) from [tihmstar](https://github.com/tihmstar) installed but *Make* have to be configured with this command : 
+- [libpatchfinder](https://github.com/tihmstar/libpatchfinder) from [tihmstar](https://github.com/tihmstar) installed but MakeFile have to be configured with this command : 
 ```./configure --with-offsetexporter```
 - [partialZipBrowser](https://github.com/tihmstar/partialZipBrowser) installed to PATH (a.k.a pzb)
 - [Python 3](https://formulae.brew.sh/formula/python@3.11) and [PyIMG4](https://github.com/m1stadev/PyIMG4) installed (```brew install python && pip3 install pyimg4```)
