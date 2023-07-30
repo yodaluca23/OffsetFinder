@@ -1,7 +1,7 @@
 # OffsetFinder
 An sh script that finds offsets for you from an IPSW link :)
 This can also generate offsets for betas.
-<img src="https://i.ibb.co/TvNkVTn/Pasted-Graphic.png">
+<img src="https://i.ibb.co/RQJ9hDs/Pasted-Graphic.png">
 ## Dependencies
 Required :
 - [libpatchfinder](https://github.com/tihmstar/libpatchfinder) from [tihmstar](https://github.com/tihmstar) installed but *Make* have to be configured with this command : 
