@@ -18,3 +18,9 @@ Optional :
 [AppInstallerIOS](https://github.com/BenjaminHornbeck6) - [Base Script](https://www.reddit.com/r/jailbreak/comments/15b0u0b/comment/jtqbzj1/)
 
 [tihmstar](https://github.com/tihmstar) - [libpatchfinder](https://github.com/tihmstar/libpatchfinder)
+
+## Offsets
+I'm planning to add even more beta offsets in the upcomming days !
+If you want to help me, try running the script and create a PR.
+
+The offsets names are in this format `iDevice-Identifier iOS-Version iOS-Build-ID.h` e.g. `iPhone11,8 16.3 20D47.h`
