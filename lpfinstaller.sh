@@ -24,8 +24,14 @@ git clone --recursive https://github.com/tihmstar/img4tool
 git clone --recursive https://github.com/tihmstar/img3tool
 git clone --recursive https://github.com/libimobiledevice/libplist
 git clone --recursive https://github.com/tihmstar/libgeneral
+git clone --recursive https://github.com/tihmstar/libinsn
 cd libgeneral
 ./autogen.sh
+sudo make
+sudo make install
+cd ../
+echo "WARNING FROM SCRIPT : This package (libinsn) doesnt seem to build correctly on some devices. Instead, you may want to try copy release content from the package's repo to your / directory." 
+cd libinsn
 sudo make
 sudo make install
 cd ../
