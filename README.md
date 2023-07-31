@@ -13,7 +13,7 @@ You can run the script without any argument but it will ask you for the IPSW URL
 - [libpatchfinder](https://github.com/tihmstar/libpatchfinder) from [tihmstar](https://github.com/tihmstar) installed but MakeFile have to be configured with this command : 
 ```./configure --with-offsetexporter```
 
-If you have trouble installing libpatchfinder or just want it installed for you, try running my [libpatchfinder installer script](https://github.com/c22dev/OffsetFinder/blob/main/LibPatchFinderInstaller.sh).
+If you have trouble installing libpatchfinder or just want it installed for you, try running my [libpatchfinder installer script](https://github.com/c22dev/OffsetFinder/blob/main/lpfinstaller.sh.sh).
 - [partialZipBrowser](https://github.com/tihmstar/partialZipBrowser) installed to PATH (aka pzb)
 - [Python 3](https://formulae.brew.sh/formula/python@3.11) and [PyIMG4](https://github.com/m1stadev/PyIMG4) installed (```brew install python && pip3 install pyimg4```)
 - An IPSW (iOS/iPadOS 16.0->16.6b1) URL (it can be obtained from [ipsw.me](https://ipsw.me/) or [ipswbeta.dev](https://ipswbeta.dev/))
