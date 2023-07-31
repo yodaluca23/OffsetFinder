@@ -1,25 +1,25 @@
 #!/bin/bash
+
+
+# Download template file
 curl -s -O https://raw.githubusercontent.com/tihmstar/libpatchfinder/master/example/offsetexporter/template_dynamic_info.h
 clear
-echo -e "OffsetFinder v0.2 - made by c22dev\nCredits : AppInstallerIOS, tihmstar"
-read -p "Enter the IPSW URL: " IPSWURL
-filename=$(basename "$IPSWURL")
-info=${filename%_Restore.ipsw}
-IFS="_" read -r Identifier Version BuildID <<< "$info"
-
-echo "Device Identifier: $Identifier"
-echo "IPSW Version: $Version"
-echo "IPSW Build ID: $BuildID"
-
-read -p "Is everything right ? (Y/N): " confirm
-if [[ "$confirm" == "Y" ]]; then
-    echo "Great ! Downloading image..."
+echo -e "OffsetFinder v0.3 - made by c22dev\nCredits : AppInstallerIOS, tihmstar"
+# Argument ?
+if [ $# -eq 1 ]; then
+  IPSWURL="$1"
 else
-    read -p "Enter your device Identifier (e.g. iPhone11,8): " Identifier
-    read -p "Enter the IPSW Version (e.g 16.1): " Version
-    read -p "Enter the IPSW Build ID (e.g. 20B79): " BuildID
-    echo "Downloading image..."
+  read -p "Enter the IPSW URL: " IPSWURL
 fi
+
+echo "Downloading files..."
+
+# IPSW Info DL
+pzb -g BuildManifest.plist "$IPSWURL" > /dev/null
+Identifier=$(/usr/libexec/PlistBuddy -c "print SupportedProductTypes:0" BuildManifest.plist)
+Version=$(/usr/libexec/PlistBuddy -c "print ProductVersion" BuildManifest.plist)
+BuildID=$(/usr/libexec/PlistBuddy -c "print ProductBuildVersion" BuildManifest.plist)
+rm BuildManifest.plist
 
 
 # Offsets extracting
@@ -88,5 +88,5 @@ if [[ "$Identifier" =~ "iPhone".* || "$Identifier" =~ "iPad".* ]]; then         
         --find_function_vn_kqfilter %kernelcache__vn_kqfilter% \
         rm "$Identifier".raw
 fi
-find . -type f -name "*.raw" -delete
+rm *.raw
 rm template_dynamic_info.h
