@@ -35,7 +35,6 @@ It should be + 0x10 instead of + 0x8.
 
 I won’t generate all offsets again but some little patching can be done easily.
 
-‎ 
 
 I'm planning to add even more beta offsets in the upcomming days !
 If you want to help me, try running the script and create a PR.
