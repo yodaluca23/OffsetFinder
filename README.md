@@ -19,9 +19,23 @@ If you have trouble installing libpatchfinder or just want it installed for you,
 - An IPSW (iOS/iPadOS 16.0->16.6b1) URL (it can be obtained from [ipsw.me](https://ipsw.me/) or [ipswbeta.dev](https://ipswbeta.dev/))
 - An Internet Connection
 
-Note : This was only tested on macOS Sonoma ; you may not be able to run this script on Linux or older versions of macOS (like really old, Ventura, Monterey and Big Sur should run it fine)
+Note : 
+This was only tested on macOS Sonoma ; you may not be able to run this script on Linux or older versions of macOS (like really old, Ventura, Monterey and Big Sur should run it fine)
 
 ## Offsets
+Some offsets (based off thimstar’s template, which is the issue) are wrong. You need to change a few manually. 
+These are the wrong ones:
+```
+._vm_map__hdr__links__prev
+._vm_map__hdr__links__next
+._vm_map__hdr__links__start
+._vm_map__hdr__links__end
+```
+It should be + 0x10 instead of + 0x8. 
+
+I won’t generate all offsets again but some little patching can be done easily.
+
+
 I'm planning to add even more beta offsets in the upcomming days !
 If you want to help me, try running the script and create a PR.
 
